@@ -1,13 +1,13 @@
 const numbers = [5, 3, 8, 1, 2];
 
-function sortArray(array, option = 'по возрастанию') {
+function sortArray(array, option = 'asc') {
     const compare = (a, b, option) => {
-        if (option === 'по возрастанию') {
+        if (option === 'asc') {
             return a > b;
-        } else if (option === 'по убыванию') {
+        } else if (option === 'desc') {
             return a < b;
         }
-        console.log("Некорректный параметр сортировки. Используйте 'по возрастанию' или 'по убыванию'.");
+        console.log("Некорректный параметр сортировки. Используйте 'asc' или 'desc'.");
     };
 
     const sortedArray = [...array];
@@ -26,5 +26,5 @@ function sortArray(array, option = 'по возрастанию') {
 
 
 
-console.log(sortArray(numbers, 'по возрастанию'));  // [1, 2, 3, 5, 8]
-console.log(sortArray(numbers, 'по убыванию')); // [8, 5, 3, 2, 1]
+console.log(sortArray(numbers, 'asc'));  // [1, 2, 3, 5, 8]
+console.log(sortArray(numbers, 'desc')); // [8, 5, 3, 2, 1]
