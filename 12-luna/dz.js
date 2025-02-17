@@ -19,15 +19,10 @@ function checkCardLuna (str){
             }
             sum += el;
             needDouble = !needDouble;
-            }
-        if (sum % 10 === 0){
-            return true;
-        } else{
-            return false;
-        }    
-            
+        }
+        return sum % 10 === 0;       
     }
 }
     
 
-console.log(checkCardLuna(card));
+// console.log(checkCardLuna(card));
