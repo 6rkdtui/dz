@@ -2,7 +2,7 @@ const sourceArr = [3, 6, 9, 2];
 console.log(sourceArr);
 
 // функция удаления элементов 
-function deleteElement (el){
+function shouldDeleteElement (el){
     return el > 5
 }
 
@@ -18,7 +18,7 @@ function filterArray (arr, fn){
     return arr;
 } 
 
-const filterArr = filterArray(sourceArr, deleteElement);
+const filterArr = filterArray(sourceArr, shouldDeleteElement);
 console.log(filterArr);
 
 
