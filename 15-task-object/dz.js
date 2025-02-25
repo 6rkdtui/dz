@@ -30,22 +30,19 @@ const ToDoList = {
     },
     updateTask: function(id, newTitle, newPriority){
         const task = this.tasks.find(task => task.id === id);
-        if (task){
-            if (newTitle){
-                task.title = newTitle;
-            }
-            if (newPriority !== undefined){
-                task.priority = newPriority;
-            }
+        if (!task) {
+            return null;
+        }
+        if (newTitle){
+            task.title = newTitle;
+        }
+        if (newPriority !== undefined){
+            task.priority = newPriority;
         }
     },
     sortTask: function(order = 'asc'){
-       this.tasks.sort((a, b) =>{
-        if (order === 'asc'){
-            return a.priority - b.priority;
-        } else {
-            return b.priority - a.priority;
-        }
+        this.tasks.sort((a, b) =>{
+            order === 'asc' ?  a.priority - b.priority : b.priority - a.priority;
        })
     }
 }
